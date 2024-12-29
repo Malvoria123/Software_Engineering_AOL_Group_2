@@ -1,0 +1,923 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+
+    background-size: cover;
+}
+
+header {
+    background-image: url('images/page2/banner.png');
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, header h2 {
+    display: inline-block;
+    margin: 0;
+    vertical-align: left;
+    text-align: left;
+}
+
+header h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+header h2 {
+    font-size: 20px;
+    margin-left: 10px; /* Menambahkan jarak antara h1 dan h2 */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: url('images/page1/image 35.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.input-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    z-index: 1; 
+}
+
+.input-overlay {
+    z-index: 2;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.input-overlay h1 {
+    font-size: 40px;
+}
+
+.input-overlay p {
+    margin-top: -20px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #ccc; /* Warna abu-abu saat di-hover */
+    color: #000; /* Opsional: Ubah warna teks saat di-hover */
+}
+
+
+.content {
+    text-align: center;
+    padding: 20px
+}
+
+.scrolling-images2 {
+    display: flex;
+    gap: 10px;
+    overflow-y: auto;
+    white-space: nowrap;
+    margin: -10px;
+}
+
+.scrolling-images2 img {
+    width: 20%; /* Ukuran gambar */
+    object-fit: cover;
+}
+
+.about-us, .customer-favorites {
+    margin: 60px 10px;
+}
+
+
+.about-us p{
+    margin: 10px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mySlides {
+    z-index: 0;
+    display: none;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-top: 20px;
+}
+
+.fade {
+    opacity: 1;
+}
+
+.slide-content {
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+}
+
+.slide-image {
+    height: 200%; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+    float: left;
+}
+
+.text {
+    width: 50%; /* Sesuaikan ukuran teks sesuai kebutuhan */
+    padding: 20px;
+}
+
+.text {
+    color: #333;
+    font-size: 15px;
+    padding: 20px 0;
+    margin-bottom: -20px;
+    width: 100%;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    margin-left: -20px;
+    margin-right: -18px;
+    width: 100%;
+    position: absolute;
+}
+
+.invi {
+ color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+   
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.menu {
+    cursor: pointer;
+}
+
+.menu-details button {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: rgba(217, 217, 217, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.menu-image-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-image-price img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.price-button {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 90%;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.price-button p {
+    font-size: 1.0em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.menu-details {
+    flex-grow: 1;
+}
+
+.menu-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.menu-details ul {
+    list-style-type: disc;
+    padding-left: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu-details li {
+    margin-bottom: 5px;
+    color: #333;
+    text-align: left;
+}
+
+.cart {
+    width: 200px;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+} */
+
+/* Tambahan untuk shopping cart */
+
+.Cart-button button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.8;
+    background-size: contain;
+    background: rgba(255, 255, 255);
+}
+
+.shopping-cart {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    width: 180px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+
+.shopping-cart h2 {
+    margin-top: 0;
+}
+
+.shopping-cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shopping-cart ul li {
+    margin: 5px 0;
+}
+
+.shopping-cart button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Styles untuk halaman checkout */
+
+
+
+.checkout-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    color: white;
+
+}
+
+.checkout-container {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.checkout-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#order-summary {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    background: #444;
+}
+
+#order-summary th,
+#order-summary td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+#order-summary th {
+    background: #555;
+}
+
+.discount-code {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.discount-code input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.discount-code button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+.checkout-container{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.payment-method {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.payment-method h2 {
+    margin-bottom: 10px;
+}
+
+.payment-method label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-method input {
+    margin-right: 10px;
+}
+
+button {
+    size: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #444444;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+body.input-section{
+    overflow: hidden;
+}
+
+body.menu-page {
+    background: url('images/page3/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body.payment-page{
+    background: url('images/page4/wallpaper_payment.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#main-content{
+    background-color:rgb(246, 246, 246);
+}
+
+.services-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services_body {
+    background-image: url('images/thank_you/thank_you_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.service-button:hover {
+    background-color: #666;
+}
+
+.mySlides {
+    display: none;
+}
+.mySlides.fade {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+
+/* Global styles untuk halaman delivery saja */
+#delivery-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background-image.jpg'); /* Tambahkan gambar latar belakang */
+    background-size: cover;
+    color: #333;
+}
+
+/* Header styling */
+#delivery-page header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
+}
+
+/* Input section */
+#delivery-page .input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+#delivery-page .input-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+#delivery-page .input-overlay label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#delivery-page .input-overlay input,
+#delivery-page .input-overlay textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#delivery-page .input-overlay button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delivery-page .input-overlay button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #delivery-page .input-overlay {
+        width: 90%;
+    }
+}
+
+.counter_container {
+    padding-left: 40px;
+    display: flex;
+}
+
+.counterlalala {
+    display: flex;
+}
+
+#thankyou_con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('images/thank_you/thank_you_background_img.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.thankyou_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap:wrap;
+    color: white;
+    /* background-color: green; */
+    font-size: 140px;
+}
+
+.thankyou_description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap:wrap;
+    color: white;
+    /* background-color: yellow; */
+    font-size: 40px;
+}
+
+.index_pesan {
+    margin-left: 30px;
+    background-color: #59463c;
+    color: white;
+    border-radius: 25px;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.index_pesan:hover {
+    background-color: #755748;
+}
+
+.checkout_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #59463C;
+    width: 400px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.checkout_body {
+    background-image: url('images/checkout_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.main_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 20px;
+    height: 400px;
+}
+
+#checkout-button {
+    background-color: white;
+    color: black;
+    width: 100px;
+}
+
+#checkout-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.total_con {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.delivery_labels {
+    color: black;
+}
+
+.delivery_inputs {
+    margin-left: -2px;
+}
+
+.takeaway_body {
+    background-image: url('images/background_gelap.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+}
+
+.main_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    margin-top: 20px;
+    height: 400px;
+    /* background-color: green; */
+}
+
+.takeaway_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #59463C; */
+    width: 400px;
+    color: white;
+    padding-bottom: 15px;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.takeaway_inputs {
+    height: 30px;
+    font-size: 20px;
+}
+
+.takeaway_button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+}
+
+.takeaway_button:hover {
+    background-color: #d1d1d1;
+}
+
+.checkout_main_takeaway {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #59463C;
+    width: 400px;
+    color: white;
+    padding-bottom: 15px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+#finish-takeaway {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+
+#finish-takeaway:hover {
+    background-color: black;
+    color: white;
+}
+
+.meja_main_con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: green; */
+    height: 400px;
+    color: white;
+    font-size: 40px;
+}
+
+#table-number {
+    width: 310px;
+    font-size: 30px;
+}
+
+#submit-button {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+}
+
+#submit-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.reservasi_body {
+    background-image: url('images/background_gelap.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: top;
+}
+
+#reservation-form {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 20px;
+    font-size: 25px;
+}
+
+#reservation-hour {
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+}
+
+#reservation-minute {
+    width: 50px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.sicustomername {
+    width: 250px;
+    height: 25px;
+    font-size: 25px;
+}
+
+#submit-reservation {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    background-color: white;
+    color: black;
+}
+
+#submit-reservation:hover {
+    background-color: rgb(182, 182, 182);
+    color: black;
+}
+
+.reservasi-detail_body {
+    background-image: url('images/checkout_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.reservasi-detail_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+    height: 400px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+#reservation-details {
+    background-color: #59463C;
+    font-size: 25px;
+    width: 450px;
+    padding-left: 15px;
+}
+
+.reservasi-detail_seattype {
+    width: 400px;
+    height: 50px;
+}
+
+.reservasi_seattype {
+    width: 150px;
+    height: 30px;
+}
+
+.delivery-status_con {
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    height: 400px;
+}
+
+.delivery-status {
+    background-color: white;
+    margin-top: 20px;
+    padding-left: 20px;
+    width: 450px;
+}
+
+.animasidelivery_body {
+    background-image: url('images/checkout_bg.png');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+.rating {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc; /* Warna default untuk bintang */
+}
+
+.rating .star {
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+.rating .star.selected, 
+.rating .star.hovered {
+    color: gold; /* Warna bintang yang dipilih atau dihover */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takeaway</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="takeaway_body">
+    <header>
+        <h1>Takeaway</h1>
+    </header>
+    <main class="main_con">
+        <form id="takeaway-form" class="takeaway_main">
+            <label for="customer-name">Nama:</label>
+            <input type="text" id="customer-name" placeholder="Masukkan nama" required class="takeaway_inputs">
+            <br>
+
+            <label for="phone-number">Nomor Telepon:</label>
+            <input type="tel" id="phone-number" placeholder="Masukkan nomor telepon" required class="takeaway_inputs">
+            <br>
+
+            <label for="pickup-time">Waktu Pengambilan:</label>
+            <div id="time-selector">
+                <select id="hours" class="takeaway_inputs">
+                    <!-- Jam 1-24 -->
+                </select>
+                :
+                <select id="minutes" class="takeaway_inputs">
+                    <!-- Menit 0-59 -->
+                </select>
+            </div>
+            <br>
+
+            <button type="button" id="submit-takeaway" class="takeaway_button">Submit</button>
+        </form>
+    </main>
+    <script src="takeaway.js"></script>
+</body>
+</html>

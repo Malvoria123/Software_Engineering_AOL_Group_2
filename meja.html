@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomor Meja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="services_body">
+    <header>
+        <h1>Masukkan Nomor Meja</h1>
+    </header>
+    <main>
+        <div class="meja_main_con">
+            <label for="table-number">Nomor Meja:</label>
+            <input type="text" id="table-number" placeholder="Masukkan nomor meja">
+            <button id="submit-button">Mulai Pesanan</button>
+        </div>
+    </main>
+    <script>
+        document.getElementById('submit-button').addEventListener('click', () => {
+            const tableNumber = document.getElementById('table-number').value.trim();
+            if (tableNumber) {
+                // Simpan nomor meja ke localStorage (opsional)
+                localStorage.setItem('tableNumber', tableNumber);
+                
+                // Alert pemberitahuan
+                alert(`Nomor Meja ${tableNumber} berhasil disimpan. Selamat menikmati!`);
+                
+                // Redirect ke halaman menu.html
+                window.location.href = 'menu.html';
+            } else {
+                // Jika input kosong, tampilkan pesan peringatan
+                alert('Silakan masukkan nomor meja terlebih dahulu.');
+            }
+         
+        });
+        
+    </script>
+
+    
+</body>
+</html>

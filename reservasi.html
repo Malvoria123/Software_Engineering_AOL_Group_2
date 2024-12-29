@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="reservasi_body">
+    <header>
+        <h1>Reservasi Tempat</h1>
+    </header>
+    <main class="reservasi_main">
+        <form id="reservation-form">
+            <label for="reservation-time">Pilih Waktu (Jam:Menit):</label>
+            <div>
+                <select id="reservation-hour">
+                    <!-- Option dari 1-24 -->
+                </select> : 
+                <select id="reservation-minute">
+                    <!-- Option dari 0-59 -->
+                </select>
+            </div>
+            <label for="customer-name">Nama:</label>
+            <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required class="sicustomername">
+
+            <label for="seat-type">Tipe Tempat:</label>
+            <select id="seat-type" class="reservasi_seattype">
+                <option value="vip">VIP</option>
+                <option value="regular">Tempat Biasa</option>
+            </select>
+
+            <button type="button" id="submit-reservation">Reservasi</button>
+        </form>
+        <div id="reservation-message"></div>
+    </main>
+    <script src="reservasi.js"></script>
+</body>
+</html>

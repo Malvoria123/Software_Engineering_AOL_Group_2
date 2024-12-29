@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oshi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Halaman Utama -->
+    <div id="main-content">
+        <header>
+            <h1>OSHI</h1>
+            <nav>
+                <button onclick="window.location.href='services.html';" class="index_pesan">Order</button> 
+            </nav>
+        </header>
+        
+        <div class="content">
+            <!-- Bagian 1: Gambar Bergeser -->
+            <div class="scrolling-images2">
+                <img src="images\page2\slider\img1.png" alt="Image 1">
+                <img src="images\page2\slider\img2.png" alt="Image 2">
+                <img src="images\page2\slider\img3.png" alt="Image 3">
+                <img src="images\page2\slider\img4.png" alt="Image 4">
+                <img src="images\page2\slider\img5.png" alt="Image 5">
+                <img src="images\page2\slider\img6.png" alt="Image 6">
+                <img src="images\page2\slider\img7.png" alt="Image 7">
+            </div>
+
+            <!-- Bagian About Us -->
+            <div class="about-us">
+                <h2>ABOUT US</h2>
+                <p>
+                    Welcome to our authentic Japanese restaurant, where we are dedicated to serving you with heart and soul. Our commitment is to provide an unforgettable dining experience with traditional Japanese cuisine, crafted with the finest ingredients and utmost care. From the moment you walk in, you'll be immersed in a warm and inviting atmosphere, ensuring every visit is special.
+                </p>
+            </div>
+
+            <!-- Bagian 2: Slideshow dengan Nama dan Deskripsi Makanan -->
+            <div class="slideshow-container">
+                <h3>CUSTOMER FAVORITES</h3>
+                <div class="mySlides fade">
+                    <div class="slide-content">
+                        <img src="images/page2/customer_favorit/image1.png" alt="Tonkutsu Ramen" class="slide-image">
+                        <div class="text">
+                            <h3>Tonkutsu Ramen</h3>
+                            <p>A rich Japanese noodle soup with a creamy broth made from pork bones simmered for hours. It's served with thin noodles, tender chashu, green onions, wood ear mushrooms, and sometimes a soft-boiled egg.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mySlides fade">
+                    <div class="slide-content">
+                        <img src="images/page2/customer_favorit/image3.png" alt="Sushi" class="slide-image">
+                        <div class="text">
+                            <h3>Sushi</h3>
+                            <p>Fresh, high-quality fish and perfectly seasoned rice make our sushi an authentic Japanese experience.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="slide-content">
+                        <img src="images/page2/customer_favorit/image2.png" alt="Japanese Curry" class="slide-image">
+                        <div class="text">
+                            <h3>Japanese Curry</h3>
+                            <p>A flavorful and mildly spicy curry served with tender chunks of meat and vegetables..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informasi Kontak -->
+            <footer class="contact-info">
+                <div class="invi">                
+                    <p1>|</p1>
+                </div>
+
+                <p>Email: oshi@gmail.com</p>
+                <p>Phone: +62865478845311</p>
+                <p>Instagram: @oshi_japan_resto</p>
+                <p>Address: Jl. Raya Kb. Jeruk No.27, R.T.1/RW.9, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11530</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlides");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("fade"); 
+                slides[i].style.opacity = "0"; 
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].classList.add("fade"); 
+            slides[slideIndex - 1].style.opacity = "1"; 
+            setTimeout(showSlides, 4000); 
+        }
+    </script>
+</body>
+</html>

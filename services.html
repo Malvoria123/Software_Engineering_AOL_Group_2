@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Layanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="services_body">
+    <header>
+        <h1>Pilih Jenis Layanan</h1>
+    </header>
+    <main class="services-section">
+        <button class="service-button" id="delivery-button">Delivery</button>
+        <button class="service-button" id="takeaway-button">Takeaway</button>
+        <button class="service-button" id="dinein-button">Dine In</button>
+        <button class="service-button" id="reservation-button">Reservasi</button>
+    </main>
+    <script>
+        document.getElementById('delivery-button').addEventListener('click', () => {
+            window.location.href = 'delivery.html';
+        });
+
+        document.getElementById('takeaway-button').addEventListener('click', () => {
+            window.location.href = "takeaway.html";
+        });
+
+        document.getElementById('dinein-button').addEventListener('click', () => {
+            window.location.href = 'meja.html';
+        });
+
+        document.getElementById('reservation-button').addEventListener('click', () => {
+            window.location.href = "reservasi.html";
+        });
+    </script>
+</body>
+</html>

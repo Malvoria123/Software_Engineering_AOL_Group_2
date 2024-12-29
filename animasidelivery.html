@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Status</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="animasidelivery_body">
+    <header>
+        <h1>Delivery Status</h1>
+    </header>
+    <div class="delivery-status_con">
+        <main class="delivery-status">
+            <section class="status">
+                <p><strong>Estimated delivery time:</strong> <span id="delivery-time"></span></p>
+                <div class="status-animation">
+                    <p id="status-text">Pesanan sedang diproses...</p>
+                    <progress id="status-progress" value="0" max="4"></progress>
+                </div>
+            </section>
+            
+            <section class="summary">
+                <h2>Payment Summary</h2>
+                <div><strong>Nama:</strong> <span id="customer-name"></span></div>
+                <div><strong>Alamat:</strong> <span id="customer-address"></span></div>
+                <ul id="order-list"></ul>
+                <div class="total"><strong>Total:</strong> <span id="total-price"></span></div>
+            </section>
+
+            <button id="feedback-toggle">^</button>
+            <section class="feedback" id="feedback-section" style="display:none;">
+                <h3>How was the food?</h3>
+                <div id="food-rating" class="rating">
+                    ★ ★ ★ ★ ★
+                </div>
+            
+                <h3>How was the driver?</h3>
+                <div id="driver-rating" class="rating">
+                    ★ ★ ★ ★ ★
+                </div>
+                
+                <h3>Add your comments</h3>
+                <textarea id="comment-box" placeholder="Write your comments..."></textarea>
+            
+                <button id="submit-feedback">Kirim Feedback</button>
+            </section>          
+        </main>
+    </div>
+    <script src="animasidelivery.js"></script>
+</body>
+</html>

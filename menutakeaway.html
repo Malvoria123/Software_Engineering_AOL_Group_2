@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Oshi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="menu-page">
+    <header>
+        <h1>OSHI</h1>
+        <h2>Menu</h2>
+        <nav>
+            <a href="#" onclick="showCategory('ramen')">Ramen</a>
+            <a href="#" onclick="showCategory('sushi')">Sushi</a>
+            <a href="#" onclick="showCategory('kare')">Kare</a>
+            <a href="#" onclick="showCategory('beverages')">Beverages</a>
+            <a href="#" onclick="showCategory('promos')">Promos</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Kategori Ramen -->
+        <div id="ramen" class="menu-category">
+            <div class="menu-container">
+                <div class="menu-item">
+                    <div class="menu-image-price">
+                        <img src="images/page3/ramen/image 42.png" alt="Tonkotsu Ramen">
+                        <div class="price-button">
+                            <p class="price">Rp 53.000</p>
+                            <button onclick="addToCart('Tonkotsu Ramen', 53000)">+</button>
+                            <button onclick="removeFromCart('Tonkotsu Ramen')">-</button>
+                        </div>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Tonkotsu Ramen</h3>
+                        <ul>
+                            <li>Rich, dense broth from simmered pork bones</li>
+                            <li>Toppings: Soft-boiled egg, chashu pork, green onions, nori</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="TonkotsuRamen" class="counterlalala">0</span></div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image-price">
+                        <img src="images/page3/ramen/image 35.png" alt="Harajuku Shoyu Ramen">
+                        <div class="price-button">
+                            <p class="price">Rp 53.000</p>
+                            <button onclick="addToCart('Harajuku Shoyu Ramen', 53000)">+</button>
+                            <button onclick="removeFromCart('Harajuku Shoyu Ramen')">-</button>
+                        </div>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Harajuku Shoyu Ramen</h3>
+                        <ul>
+                            <li>Salty, savory broth with soy sauce base</li>
+                            <li>Toppings: Similar to tonkotsu but lighter overall</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="HarajukuShoyuRamen" class="counterlalala">0</span></div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image-price">
+                        <img src="images/page3/ramen/image 44.png" alt="Nagoya Miso Ramen">
+                        <div class="price-button">
+                            <p class="price">Rp 56.000</p>
+                            <button onclick="addToCart('Nagoya Miso Ramen', 56000)">+</button>
+                            <button onclick="removeFromCart('Nagoya Miso Ramen')">-</button>
+                        </div>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Nagoya Miso Ramen</h3>
+                        <ul>
+                            <li>Umami-rich broth with fermented soybean paste</li>
+                            <li>Toppings: Corn, bean sprouts, ground pork, green onions</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="NagoyaMisoRamen" class="counterlalala">0</span></div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image-price">
+                        <img src="images/page3/ramen/image 46.png" alt="Kyoto Miso Ramen">
+                        <div class="price-button">
+                            <p class="price">Rp 56.000</p>
+                            <button onclick="addToCart('Kyoto Miso Ramen', 56000)">+</button>
+                            <button onclick="removeFromCart('Kyoto Miso Ramen')">-</button>
+                        </div>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Kyoto Miso Ramen</h3>
+                        <ul>
+                            <li>Rich, soul-warming miso with mirin and ginger</li>
+                            <li>Toppings: Soft-boiled egg, roasted garlic, shansho pepper</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="KyotoMisoRamen" class="counterlalala">0</span></div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-image-price">
+                        <img src="images/page3/ramen/image 47.png" alt="Hokkai Butter Corn">
+                        <div class="price-button">
+                            <p class="price">Rp 56.000</p>
+                            <button id="hokkai_button_plus" onclick="addToCart('Hokkai Butter Corn', 56000)">+</button>
+                            <button id="hokkai_button_min" onclick="removeFromCart('Hokkai Butter Corn')">-</button>
+                        </div>
+                    </div>
+                    <div class="menu-details">
+                        <h3>Hokkai Butter Corn</h3>
+                        <ul>
+                            <li>Creamy miso with Hokkaido butter</li>
+                            <li>Toppings: Sweet corn, butter base, chashu pork</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="HokkaiButterCorn" class="counterlalala">0</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori Sushi -->
+        <div id="sushi" class="menu-category" style="display: none;">
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 55.png" alt="Nigiri Sushi" style="width: 120px;">
+                    <div class="price-button">
+                        <p class="price">Rp 25.000</p>
+                        <button onclick="addToCart('Nigiri Sushi', 25000)">+</button>
+                        <button onclick="removeFromCart('Nigiri Sushi')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Nigiri Sushi</h3>
+                    <ul>
+                        <li>Pressed vinegared rice topped with raw salmon</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="NigiriSushi" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 52.png" alt="Gunkan Sushi">
+                    <div class="price-button">
+                        <p class="price">Rp 22.000</p>
+                        <button onclick="addToCart('Gunkan Sushi', 22000)">+</button>
+                        <button onclick="removeFromCart('Gunkan Sushi')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Gunkan Sushi</h3>
+                    <ul>
+                        <li>Nori-wrapped rice vessel topped with prawn and tobiko</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="GunkanSushi" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 54.png" alt="Maki Sushi">
+                    <div class="price-button">
+                        <p class="price">Rp 15.000</p>
+                        <button onclick="addToCart('Maki Sushi', 15000)">+</button>
+                        <button onclick="removeFromCart('Maki Sushi')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Maki Sushi</h3>
+                    <ul>
+                        <li>Rice and salmon roll with nori</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="MakiSushi" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 56.png" alt="Tempura Shrimp Sushi">
+                    <div class="price-button">
+                        <p class="price">Rp 22.000</p>
+                        <button onclick="addToCart('Tempura Shrimp Sushi', 22000)">+</button>
+                        <button onclick="removeFromCart('Tempura Shrimp Sushi')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Tempura Shrimp Sushi</h3>
+                    <ul>
+                        <li>Crispy tempura-fried shrimp on rice with mayo-based sauce</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="TempuraShrimpSushi" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 53.png" alt="Dragon Roll">
+                    <div class="price-button">
+                        <p class="price">Rp 32.000</p>
+                        <button onclick="addToCart('Dragon Roll', 32000)">+</button>
+                        <button onclick="removeFromCart('Dragon Roll')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Dragon Roll</h3>
+                    <ul>
+                        <li>Shrimp tempura, cucumber, avocado, tobiko, spicy mayo, unagi sauce</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="DragonRoll" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 48.png" alt="Alaskan Roll">
+                    <div class="price-button">
+                        <p class="price">Rp 28.000</p>
+                        <button onclick="addToCart('Alaskan Roll', 28000)">+</button>
+                        <button onclick="removeFromCart('Alaskan Roll')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Alaskan Roll</h3>
+                    <ul>
+                        <li>Smoked salmon, avocado, crab stick, cucumber</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="AlaskanRoll" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 49.png" alt="Bath Street Roll">
+                    <div class="price-button">
+                        <p class="price">Rp 35.000</p>
+                        <button onclick="addToCart('Bath Street Roll', 35000)">+</button>
+                        <button onclick="removeFromCart('Bath Street Roll')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Bath Street Roll</h3>
+                    <ul>
+                        <li>Octopus, crab, smelt egg, cream cheese, avocado, cucumber, nori</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="BathStreetRoll" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/sushi/image 50.png" alt="Baked Salmon Roll">
+                    <div class="price-button">
+                        <p class="price">Rp 35.000</p>
+                        <button onclick="addToCart('Baked Salmon Roll', 35000)">+</button>
+                        <button onclick="removeFromCart('Baked Salmon Roll')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Baked Salmon Roll</h3>
+                    <ul>
+                        <li>Broiled salmon, crab, cucumber, cream cheese, sweet sauce</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="BakedSalmonRoll" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Kategori Kare -->
+        <div id="kare" class="menu-category" style="display: none;">
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/curry/image 58.png" alt="Yakishimo Kare">
+                    <div class="price-button">
+                        <p class="price">Rp 50.000</p>
+                        <button onclick="addToCart('Yakishimo Kare', 50000)">+</button>
+                        <button onclick="removeFromCart('Yakishimo Kare')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Yakishimo Kare</h3>
+                    <ul>
+                        <li>A grilled curry featuring sliced, grilled chicken served over white rice.</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="YakishimoKare" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/curry/image 35.png" alt="Yasai Kare">
+                    <div class="price-button">
+                        <p class="price">Rp 45.000</p>
+                        <button onclick="addToCart('Yasai Kare', 45000)">+</button>
+                        <button onclick="removeFromCart('Yasai Kare')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Yasai Kare</h3>
+                    <ul>
+                        <li>A vibrant vegetable curry with carrots, bell peppers, and green beans.</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="YasaiKare" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/curry/image 59.png" alt="Yokaza Kare">
+                    <div class="price-button">
+                        <p class="price">Rp 58.000</p>
+                        <button onclick="addToCart('Yokaza Kare', 35000)">+</button>
+                        <button onclick="removeFromCart('Yokaza Kare')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Yokaza Kare</h3>
+                    <ul>
+                        <li>Breaded and fried pork cutlets served with rich, sweet, and flavorful Japanese curry sauce and creamy soft egg</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="YokazaKare" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/curry/image 60.png" alt="Niku Jaga Kare">
+                    <div class="price-button">
+                        <p class="price">Rp 58.000</p>
+                        <button onclick="addToCart('Niku Jaga Kare', 58000)">+</button>
+                        <button onclick="removeFromCart('Niku Jaga Kare')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Niku Jaga Kare</h3>
+                    <ul>
+                        <li>A hearty curry with chunks of beef and potatoes.</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="NikuJagaKare" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/curry/image 61.png" alt="Tsuyu Kare">
+                    <div class="price-button">
+                        <p class="price">Rp 53.000</p>
+                        <button onclick="addToCart('Tsuyu Kare', 53000)">+</button>
+                        <button onclick="removeFromCart('Tsuyu Kare')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Tsuyu Kare</h3>
+                    <ul>
+                        <li>A thick, glossy curry served over hainam rice.</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="TsuyuKare" class="counterlalala">0</span></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Kategori Beverages -->
+        <div id="beverages" class="menu-category" style="display: none;">
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/drinks/image 62.png" alt="Ocha">
+                    <div class="price-button">
+                        <p class="price">Rp 10.000</p>
+                        <button onclick="addToCart('Ocha', 10000)">+</button>
+                        <button onclick="removeFromCart('Ocha')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Ocha</h3>
+                    <ul>
+                        <li>Fresh, grassy, and slightly sweet green tea</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="Ocha" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/drinks/image 63.png" alt="Matcha">
+                    <div class="price-button">
+                        <p class="price">Rp 25.000</p>
+                        <button onclick="addToCart('Matcha', 25000)">+</button>
+                        <button onclick="removeFromCart('Matcha')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Matcha</h3>
+                    <ul>
+                        <li>
+                            Finely ground green tea powder with a sweet and bitter flavor</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="Matcha" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/drinks/image 64.png" alt="amazake">
+                    <div class="price-button">
+                        <p class="price">Rp 18.000</p>
+                        <button onclick="addToCart('Amazake', 18000)">+</button>
+                        <button onclick="removeFromCart('Amazake')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Amazake</h3>
+                    <ul>
+                        <li>Non-alcoholic rice drink with vitamins</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="Amazake" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/drinks/image 65.png" alt="Oolong tea">
+                    <div class="price-button">
+                        <p class="price">Rp 20.000</p>
+                        <button onclick="addToCart('Oolong tea', 20000)">+</button>
+                        <button onclick="removeFromCart('Oolong tea')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Oolong tea</h3>
+                    <ul>
+                        <li>Fresh, grassy, and slightly sweet green tea</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="Oolongtea" class="counterlalala">0</span></div>
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/drinks/image 66.png" alt="Water">
+                    <div class="price-button">
+                        <p class="price">Rp 10.000</p>
+                        <button onclick="addToCart('Water', 10000)">+</button>
+                        <button onclick="removeFromCart('Water')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Water</h3>
+                    <ul>
+                        <li>Non carbonated fresh water</li>
+                    </ul>
+                    <div class="counter_container">Total Ordered: <span id="Water" class="counterlalala">0</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kategori Promos -->
+        <div id="promos" class="menu-category">
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/promos/promo1.png" alt="promo1">
+                    <div class="price-button">
+                        <p class="price">Rp 65.000</p>
+                        <button onclick="addToCart('Promo 1', 65000)">+</button>
+                        <button onclick="removeFromCart('Promo 1')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Promo 1</h3>
+                    
+                        <ul>
+                            <li>Yoza Kare</li>
+                            <li>Maki Sushi</li>
+                        </ul>
+                        <div class="counter_container">Total Ordered: <span id="Promo1" class="counterlalala">0</span></div>    
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/promos/promo2.png" alt="promo2">
+                    <div class="price-button">
+                        <p class="price">Rp 98.000</p>
+                        <button onclick="addToCart('Promo 2', 98000)">+</button>
+                        <button onclick="removeFromCart('Promo 2')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Promo 2</h3>
+                    
+                        <ul>
+                            <li>Tsuyu Kare</li>
+                            <li>Tokyo Shoyu Ramen</li>
+                        </ul>    
+                        <div class="counter_container">Total Ordered: <span id="Promo2" class="counterlalala">0</span></div>     
+                </div>
+            </div>
+            <div class="menu-item" style="margin-bottom: 20px;">
+                <div class="menu-image-price">
+                    <img src="images/page3/promos/promo3.png" alt="promo3">
+                    <div class="price-button">
+                        <p class="price">Rp 18.000</p>
+                        <button onclick="addToCart('Promo 3', 18000)">+</button>
+                        <button onclick="removeFromCart('Promo 3')">-</button>
+                    </div>
+                </div>
+                <div class="menu-details">
+                    <h3>Promo 3</h3>
+                    
+                        <ul>
+                            <li>Tempura Shrimp Sushi</li>
+                            <li>Dragon Roll</li>
+                            <li>Bath Street Roll</li>
+                        </ul>   
+                        <div class="counter_container">Total Ordered: <span id="Promo3" class="counterlalala">0</span></div>      
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart -->
+
+    <div class="Cart-button">
+    <button id="asdf-button" onclick="toggleCart()">
+        <img src="images/page3/logo_keranjang.png" alt="Your Cart">
+    </button>
+
+    </div>
+        
+    <div class="shopping-cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: Rp <span id="cart-total">0</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <script src="menu_scripttakeaway.js"></script>
+</body>
+</html>
